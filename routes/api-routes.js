@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Workout = require("../models/workout.js");
+const db = require("../models");
 
 //We need a route for getting our workouts from /api/workouts
 //We need a route for PUTTing a working out according to /api/workouts/:id
@@ -7,7 +7,7 @@ const Workout = require("../models/workout.js");
 //We need a route for get workouts in a range 
 
 router.get("/api/workouts", (req, res)=>{
-    Workout.find({})
+    db.Workout.find({})
     .then(results=>{
         res.json(results);
     })
@@ -17,7 +17,7 @@ router.get("/api/workouts", (req, res)=>{
 });
 
 router.put("/api/workouts/:id",({ body, params }, res)=>{
-    Workout.findByIdAndUpdate(
+    db.Workout.findByIdAndUpdate(
         params.id, 
         {$push: {exercises: body}
     })
@@ -30,11 +30,11 @@ router.put("/api/workouts/:id",({ body, params }, res)=>{
 });
 
 router.post("/api/workouts", (req, res)=>{
-    Workout.create({});
+    db.Workout.create({});
 });
 
 router.get("/api/workouts", (req, res)=>{
-    Workout.find();
+    db.Workout.find();
 });
 
 module.exports = router;
