@@ -16,25 +16,37 @@ router.get("/api/workouts", (req, res)=>{
     });
 });
 
-router.put("/api/workouts/:id",({ body, params }, res)=>{
+router.put("/api/workouts/:id",( req, res)=>{
     db.Workout.findByIdAndUpdate(
-        params.id, 
-        {$push: {exercises: body}
+        req.params.id, 
+        {$push: {exercises: req.body}
     })
     .then(results=>{
         res.json(results);
     })
     .catch(err=>{
         res.json(err);
-    })
+    });
 });
 
 router.post("/api/workouts", (req, res)=>{
-    db.Workout.create({});
+    db.Workout.create({})
+    .then(results=>{
+        res.json(results);
+    })
+    .catch(err=>{
+        res.json(err);
+    });
 });
 
 router.get("/api/workouts", (req, res)=>{
-    db.Workout.find();
+    db.Workout.find()
+    .then(results=>{
+        res.json(results);
+    })
+    .catch(err=>{
+        res.json(err);
+    });
 });
 
 module.exports = router;
