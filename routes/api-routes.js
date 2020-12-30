@@ -7,7 +7,7 @@ const db = require("../models");
 //We need a route for get workouts in a range 
 
 router.get("/api/workouts", (req, res)=>{
-    db.Workout.find({})
+    db.Workout.find()
     .then(results=>{
         res.json(results);
     })
