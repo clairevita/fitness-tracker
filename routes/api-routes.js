@@ -8,7 +8,6 @@ const db = require("../models");
 
 router.get("/api/workouts", (req, res)=>{
     db.Workout.find({})
-    //aggregate sort
     .then(results=>{
         res.json(results);
     })
@@ -42,6 +41,7 @@ router.post("/api/workouts", (req, res)=>{
 
 router.get("/api/workouts/range", (req, res)=>{
     db.Workout.find({})
+    //Aggregate sort? Maybe by date? Maybe by exercise type?
     .then(results=>{
         res.json(results);
     })
