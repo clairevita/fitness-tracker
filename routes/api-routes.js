@@ -7,7 +7,8 @@ const db = require("../models");
 //We need a route for get workouts in a range 
 
 router.get("/api/workouts", (req, res)=>{
-    db.Workout.find()
+    db.Workout.find({})
+    //aggregate sort
     .then(results=>{
         res.json(results);
     })
@@ -40,7 +41,7 @@ router.post("/api/workouts", (req, res)=>{
 });
 
 router.get("/api/workouts/range", (req, res)=>{
-    db.Workout.find()
+    db.Workout.find({})
     .then(results=>{
         res.json(results);
     })
