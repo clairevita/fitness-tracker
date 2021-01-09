@@ -7,7 +7,8 @@ const db = require("../models");
 //We need a route for get workouts in a range 
 
 router.get("/api/workouts", (req, res)=>{
-    db.Workout.find()
+    db.Workout.find({})
+    .sort({ date: 1 })
     .then(results=>{
         res.json(results);
     })
@@ -18,7 +19,7 @@ router.get("/api/workouts", (req, res)=>{
 
 router.put("/api/workouts/:id",( req, res)=>{
     db.Workout.findByIdAndUpdate(
-        req.params.id, 
+        {_id: req.params.id}, 
         {$push: {exercises: req.body}
     })
     .then(results=>{
@@ -40,7 +41,9 @@ router.post("/api/workouts", (req, res)=>{
 });
 
 router.get("/api/workouts/range", (req, res)=>{
-    db.Workout.find()
+    db.Workout.find({})
+    .limit(7)
+    .sort({ day: 1 })
     .then(results=>{
         res.json(results);
     })
