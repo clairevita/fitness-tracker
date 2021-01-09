@@ -42,7 +42,7 @@ router.post("/api/workouts", (req, res)=>{
 
 router.get("/api/workouts/range", (req, res)=>{
     db.Workout.find({})
-    
+    .sort({ date: -1 })
     .then(results=>{
         res.json(results);
     })
