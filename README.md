@@ -7,7 +7,9 @@
   - [Contributions](#contributions)
   - [Questions](#questions)
   ## About
-This project showcases comptenency in MVC development patterns, implementing JavaScript, MySQL, Node, Express, and Handlebars to facilitate front-end user interactions.
+This fitness web application enables users to input exercises during their workout, and then track their statistics on a dashboard.  
+  
+This assignment showcases comptenency in MVC development patterns, using the Express, Morgan, Mongoose npm packages to facilitate MongoDB database and front-end user experience.
   
   [View the deployed site here!](https://cv-fitness-tracker.herokuapp.com/)
   
@@ -18,6 +20,7 @@ This project showcases comptenency in MVC development patterns, implementing Jav
 To view this app, go to [cv-fitness-tracker.herokuapp.com](https://cv-fitness-tracker.herokuapp.com/).
 
 ### Locally Hosted
+
 
   ## Usage
 
