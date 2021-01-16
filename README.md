@@ -11,41 +11,25 @@ This fitness web application enables users to input exercises during their worko
   
 This assignment showcases comptenency in MVC development patterns, using the Express, Morgan, Mongoose npm packages to facilitate MongoDB database and front-end user experience.
   
-  [View the deployed site here!](https://cv-fitness-tracker.herokuapp.com/)
+  [View the deployed site here!](https://cv-pwa-budget-tracker.herokuapp.com/)
+  
+  ![](https://i.imgur.com/FcpeDV5.png)
   
   ## Installation
 
 ### Heroku Hosted
 
-To view this app, go to [cv-fitness-tracker.herokuapp.com](https://cv-fitness-tracker.herokuapp.com/).
+To view this app, go to [cv-pwa-budget-tracker.herokuapp.com](https://cv-pwa-budget-tracker.herokuapp.com/).
 
 ### Locally Hosted
 
 Clone the repository to your desired directory, then run `npm install` to download the necessary packages.
 
-To seed the project with prefabricated data, run `npm run seed`.
+To initiate the server, run `node server.js`.
 
 Go to [localhost:3000](http://localhost:3000/) to view the application.
 
   ## Usage
-
-From the homepage, select "New Workout" 
-
-![](https://i.imgur.com/ht4hAl0.png)
-
-On the New Workout screen tap the Exercise Type dropdown and select the type of exercise you will be practicing.
-
-For Resistance type exercises, next input the Name, Weight, number of Sets, and Reps, as well as the duration of the exercise. 
-
-For Cardio type exercises, enter the name, distance, and duration of that particular exercise. 
-
-![](https://i.imgur.com/ht4hAl0.png)
-
-To complete this exercise and return to the homepage press Complete, if you want to add your next exercise, select Add Exercise.
-
-Using this app over time enables the end user to assess the length of their workouts and amout of weight that they are using. It also enables them to view the proportions across all of the exercises that they are engaging in. To view these metrics, tap the Dashboard item on the Nav bar, to view visualized data. 
-
-![](https://i.imgur.com/uiAo5F2.png)
 
 
   ## Contributions
